@@ -1,0 +1,79 @@
+/* 基础样式 */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 260px;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  resize: horizontal;
+  overflow: auto;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.book-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.book-list div {
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.book-list div:hover {
+  background-color: #f1f1f1;
+}
+
+.book-list .active {
+  background-color: #f7f7f7;
+  font-weight: bold;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  resize: horizontal;
+  min-width: 400px; /* Ensure the content area does not shrink too small */
+}
+
+.current-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.content {
+  line-height: 1.8;
+  color: #333;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 12px 0;
+}
